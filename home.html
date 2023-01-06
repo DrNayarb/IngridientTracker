@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css\mediumMedia.css">
+    <link rel="stylesheet" href="Css\smallMedia.css">
+    <link rel="stylesheet" href="Css\largeMedia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Ingredients Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/json2csv"></script>
+
+</head>
+
+<body>
+    <h1>Ingredients Tracker</h1>
+
+    <div id="instructions-Holder">
+        <h2>Instructions:</h2>
+        <p>If this is your first time using this webiste,
+            you can add a food by entering a name, using the calender to enter a date, and place a number for quantity.
+            Afterward, click the save button to save your information as a csv file.
+            If you have already created a csv file, click on the choose a csv file button and click on the previously
+            stored csv.
+            The bottom textarea shows expiration dates of the selected ingridient.
+            You may delete an ingrideint with the delete buttom. Lastly, you may use an ingridient by using the use
+            button.
+        </p>
+
+        <button id="removeInstructions">
+            <span class="button_text">Remove Instructions</span>
+            <span class="button_icon">
+                <ion-icon name="remove-circle-outline"></ion-icon>
+            </span></button>
+    </div>
+
+
+    <div class="csvInfo">
+        <input type="file" name="" id="file" accept=".csv">
+
+        <label id='fileBtn' for="file">
+            <ion-icon name="folder-outline"></ion-icon> Choose a CSV file
+        </label>
+        <button id="create_csv">
+            <span class="button_text">create csv</span>
+        </button>
+    </div>
+
+    <div id="add_holder">
+        <div class="wrapper">
+            <input type="text" name="Food_n" id="item_name" required>
+            <label class="normalLabel">Name</label>
+        </div>
+        <div class="wrapper">
+            <input type="date" name="Food_d" id="item_date" required>
+            <label class="label4expi">Expiration Date</label>
+        </div>
+        <div class="wrapper">
+            <input type="number" name="Food_q" id="item_quantiy" required>
+            <label class="normalLabel">Quantity</label>
+        </div>
+        <button id="add">
+            <span class="button_text">Add</span>
+            <span class="button_icon">
+                <ion-icon name="add-outline"></ion-icon>
+            </span></button>
+    </div>
+
+    <ul id="list_holder">
+
+    </ul>
+
+    <div>
+        <button id="save">
+            <span class="button_text">save</span>
+            <span class="button_icon">
+                <ion-icon name="save-outline"></ion-icon>
+        </button>
+    </div>
+
+    <div id="food_information_holder">
+        <h3> Selected Food Information</h3>
+        <textarea name="selectedText" id="selectedText" cols="40" rows="10"></textarea>
+    </div>
+
+
+    <p id="credit">Credit to Brayan Fortunato</p>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

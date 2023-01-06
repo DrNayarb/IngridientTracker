@@ -1,0 +1,281 @@
+#credit{
+    display: none;
+}
+
+
+*{
+    color:white;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    color:#FFD60A;
+    margin-top: 0;
+    font-size: medium;
+}
+body{
+    background-image:url("assets/Bg.jpg");
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 8, 20, 0.7);
+    position: relative;
+    margin-left: 0;
+ }
+
+@media(min-width:1498px) and (max-width:1744px){
+
+    h1{
+        margin-left: 20px;
+    }
+.selectedLi{
+    background-color: grey;
+    color:ffd60a;
+}
+#selectedText{
+    margin-top: 50px;
+display: block;
+}
+#btn-upload{
+    margin-left: 0px;
+}
+#file{
+    margin-right:0px;
+}
+
+#instructions-Holder{
+    width: 400px;
+    height:800px;
+    position:absolute;
+    right: 0%;
+    margin-right: 20px;
+}
+button{
+    display: inline-flex;
+    height:50px;
+    padding: 0;
+    background:#FFD60A ;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Quicksand',sans-serif;
+    font-size:16px;
+    font-weight: 500px;
+    cursor: pointer;
+}
+button:hover , button:active{
+    background:#FFC300;
+}
+button .button_text , .button_icon{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 100%;
+}
+button .button_icon{
+    font: size 1.5em;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+#add{
+    background: #003566;
+    height: 3vh;
+    width: 10vw;
+}
+#btn-upload{
+    background: #003566;
+    height:30px;
+    width: 60px;
+    position: relative;
+    top:10%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#create_csv{
+    background: #003566;
+    height:30px;
+    width: 150px;
+    position: relative;
+    top:10%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#btn-upload .button_text{
+    font-size: 10px;
+}
+
+#add:hover{
+background:#001D3D;
+}
+#add_holder{
+    width:1000px;
+    padding: 10px;
+    margin-top: 10px;
+    background: #373737 ;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#add_holder input{
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    outline: none;
+    background-color: #808080;
+    color:white;
+    width: 15vw;
+    height: 3vh;
+    font-size: 1em;
+    transition:0.3s;
+  
+}
+.wrapper{
+    display: inline-flex;
+    position: relative;
+}
+#add_holder label{
+    font-size: 1em;
+    position:absolute;
+    padding: 10px;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+#add_holder label:hover{
+    cursor:pointer;
+}
+#add_holder .label4expi{
+    color:black;
+    background:#FFD60A;
+    transform: translateX(10px) translateY(-7px);
+    border-radius: 5px;
+    font-size: 0.65em;
+    padding: 0 10px;
+    border-left: 1px solid #FFD60A;
+    border-right: 1px solid #FFD60A;
+    letter-spacing: 0.2em;
+}
+
+#add_holder input:focus ~.normalLabel,
+#add_holder input:valid ~.normalLabel
+{
+color:#FFD60A;
+transform: translateX(10px) translateY(-7px);
+font-size: 0.65em;
+padding: 0 10px;
+border-left: 1px solid #FFD60A;
+border-right: 1px solid #FFD60A;
+letter-spacing: 0.2em;
+}
+#add_holder input:focus ,
+#add_holder input:valid {
+    border: 1px solid #FFD60A;
+}
+
+input[type = "file"]{
+    display: none;
+}
+.csvInfo{
+    display: flex;
+    
+}
+.csvInfo label{
+    color:white;
+    height:30px;
+    width: 150px;
+    background-color: #FFD60A;
+    font-size: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.csvInfo label:hover{
+    background-color: #f5ae09;
+}
+
+
+#list_holder .item{
+    font-size: 17px;
+   margin-left:20px;
+   margin-top:10px;
+   margin-right: 180px;
+}
+#list_holder{
+    position: relative;
+}
+
+#list_holder div{
+    width: 600px;
+    padding: 0;
+    height: 50px;
+    background: grey;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#list_holder .delete,.use{
+      background: none;
+     color: crimson;
+     margin-top: 10px;
+     font-weight: 700;
+    height:30px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#list_holder input[type="number"]{
+    width: 60px;
+    height: 30px;
+    background-color: grey;
+    border: none;
+    border-bottom: 2px solid black;
+ 
+}
+#list_holder .use_holder{
+    display: flex;
+   width: 100px;
+   height: 30px;
+   
+}
+#list_holder li {
+    width: 300px;
+}
+.disabled{
+display: none;
+}
+#list_holder .use{
+    color:#FFC300;
+}
+
+#list_holder .use:hover{
+   background: none;
+}
+#food_information_holder{
+    position: relative;
+    margin-top: 200px;
+}
+#food_information_holder textarea{
+    position: absolute;
+    top:0;
+    background-color: #373737;
+}
+
+#save{
+    background-color: green;
+}
+}
